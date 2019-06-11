@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'registry_url', defaultValue: '')
+        string(name: 'registry_url', defaultValue: 'dummy_value')
 	    string(name: 'image_name', defaultValue: 'st_base_image')
     }
 
