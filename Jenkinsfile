@@ -2,9 +2,8 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'registry_url')
-	    string(name: 'registry_credentials')
-	    string(name: 'image_name')
+        string(name: 'registry_url', defaultValue: '')
+	    string(name: 'image_name', defaultValue: 'st_base_image')
     }
 
     triggers {
@@ -24,7 +23,8 @@ pipeline {
 
         // stage('Deploy Image') {
         //     steps {
-        //         sh "docker image push ${params.image_name}:latest"
+        //         sh "aws ecr get-login"
+        //         sh "docker image push ${params.registry_url}:latest"
         //     }
         // }
 
