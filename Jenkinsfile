@@ -8,7 +8,7 @@ pipeline {
     }
 
     triggers {
-        pollSCM('0 * * * *')
+        pollSCM('* * * * *')
     }
 
     options {
